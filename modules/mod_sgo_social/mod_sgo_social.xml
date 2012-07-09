@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_sgo_social</name>
+	<author>Chad Windnagle</author>
+	<creationDate>July 2012</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 s-go Consulting, llc</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>chad@s-go.net</authorEmail>
+	<authorUrl>http://www.s-go.net</authorUrl>
+	<version>2.5.0</version>
+	<description>s-go consulting, lcc custom social icons module. Credits: Thanks to OneExtraPixel.com for the freebie icon set. </description>
+	<files>
+		<filename module="mod_sgo_social">mod_sgo_social.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_sgo_social.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="theme"
+					type="list"
+					default="extra"
+					label="Theme"
+					description="Select the icon theme set. This is either s-go's custom theme, or the icon theme from OneExtraPixel.com">
+					<option
+						value="sgo">S-go Custom</option>
+					<option
+						value="extra">OneExtraPixel.com</option>
+				</field>
+				<field
+					name="size"
+					type="list"
+					label="Icon Size"
+					description="Select icon size. Only available for OneExtraPixel.com Theme">
+					<option
+						value="39x40">Small - 39x40</option>
+					<option
+						value="58x60">Medium - 58x60</option>
+					<option
+						value="77x79">Large - 77x79</option>
+				</field>
+				<field
+					name="rollover"
+					type="list"
+					default="1"
+					label="Rollover Effect"
+					description="Enable or disable the rollover effect for the icons.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="icons_css"
+					type="text"
+					default="float:left;width:400px;"
+					label="Icon Wrapper CSS"
+					description="Enter custom css for icon *wrapper*.">
+				</field>
+				<field
+					name="icon_css"
+					type="text"
+					default="float:left;width:77px;"
+					label="Icon CSS"
+					description="Enter custom css for EACH icon">
+				</field>
+			</fieldset>
+			<fieldset name="Icon Config">
+				<field
+					name="twitter"
+					type="list"
+					default="1"
+					label="Enable Twitter"
+					description="Enable twitter icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="twitter_url"
+					type="text"
+					default="http://www.twitter.com/sgoconsulting"
+					label="Twitter Profile"
+					description="Enter full URL.">
+				</field>
+				<field name="spacer1" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="facebook"
+					type="list"
+					default="1"
+					label="Enable Facebook"
+					description="Enable Facebook icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="facebook_url"
+					type="text"
+					default="http://www.facebook.com/sgoconsulting"
+					label="Facebook Profile"
+					description="Enter full Facebook URL">
+				</field>
+				<field name="spacer2" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="flickr"
+					type="list"
+					default="1"
+					label="Enable Flickr"
+					description="Enable Flickr icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="flickr_url"
+					type="text"
+					default="http://www.flickr.com/sgoconsulting"
+					label="Flickr Profile"
+					description="Enter full Flickr URL">
+				</field>
+				<field name="spacer3" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="google_plus"
+					type="list"
+					default="1"
+					label="Enable Google+"
+					description="Enable Google+ icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="google_plus_url"
+					type="text"
+					default="http://plus.google.com/sgoconsulting"
+					label="Google+ Profile"
+					description="Enter full Google+ URL">
+				</field>
+				<field name="spacer4" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="linked_in"
+					type="list"
+					default="1"
+					label="Enable LinkedIn"
+					description="Enable LinkedIn icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="linked_in_url"
+					type="text"
+					default="http://www.linkedin.com/sgoconsulting"
+					label="LinkedIn Profile"
+					description="Enter full LinkedIn URL">
+				</field>
+				<field name="spacer5" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="youtube"
+					type="list"
+					default="1"
+					label="Enable Youtube"
+					description="Enable Youtube icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="youtube_url"
+					type="text"
+					default="http://www.youtube.com/sgoconsulting"
+					label="Youtube Profile"
+					description="Enter full Youtube URL">
+				</field>
+				<field name="spacer6" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="pinterest"
+					type="list"
+					default="1"
+					label="Enable Pinterest"
+					description="Enable Pinterest icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="pinterest_url"
+					type="text"
+					default="http://www.pinterest.com/sgoconsulting"
+					label="Pinterest Profile"
+					description="Enter full Pinterest URL">
+				</field>
+				<field name="spacer7" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="rss"
+					type="list"
+					default="1"
+					label="Enable RSS"
+					description="Enable RSS icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="rss_url"
+					type="text"
+					default="http://"
+					label="RSS URL"
+					description="Enter RSS URL">
+				</field>
+				<field name="spacer8" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="custom1"
+					type="list"
+					default="1"
+					label="Custom Icon 1"
+					description="Enable Custom 1 icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="custom1_src"
+					type="text"
+					default="images/stories/icon1.png"
+					label="Custom Icon 1 Img Src"
+					description="Enter the img src">
+				</field>
+				<field
+					name="custom1_url"
+					type="text"
+					default="http://"
+					label="Custom Icon 1 URL"
+					description="Enter Custom Icon 1 URL">
+				</field>
+				<field name="spacer9" type="spacer" class="text"
+					label=""
+				/>
+				<field
+					name="custom2"
+					type="list"
+					default="1"
+					label="Custom Icon 2"
+					description="Enable Custom 2 icon?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="custom2_src"
+					type="text"
+					default="images/stories/icon2.png"
+					label="Custom Icon 2 Img Src"
+					description="Enter the img src">
+				</field>
+				<field
+					name="custom2_url"
+					type="text"
+					default="http://"
+					label="Custom Icon 2 URL"
+					description="Enter Custom Icon 2 URL">
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
