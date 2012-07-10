@@ -15,13 +15,16 @@ $path 		= JURI::base() . "modules/mod_sgo_social/assets/images/themes/";
 
 $icons_css 	= $params->get('icons_css', "float:left;width:400px;");
 $icon_css 	= $params->get('icon_css', "float:left;width:77px;");
+$rollover 	= $params->get('rollover', 1);
 ?>
 
 <div class="icons" style="<?php echo $icons_css; ?>">
 
 	<?php foreach ($icons as $icon) : ?>
 		<div class="icon_<?php echo $i++ ?>" style="<?php echo $icon_css; ?>">
-			<a href="<?php echo $icon->url; ?>" target="_blank"><img src="<?php echo $path . $icon->icon; ?>" /></a>
+			<a href="<?php echo $icon->url; ?>" target="_blank">
+				<img src="<?php echo $path . $icon->icon; ?>" <?php if ($rollover) echo "class=\"mo\""; ?> />
+			</a>
 		</div>
 	<?php endforeach; ?>
 

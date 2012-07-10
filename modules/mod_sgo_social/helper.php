@@ -14,8 +14,8 @@ class modSgoSocialHelper
 
 	static function &getIcons(&$params)
 	{	
-		$theme		= $params->get('theme', "extra");
-		$size		= $params->get('size', "39x40");
+		$theme		=	$params->get('theme', "extra");
+		$size		=	$params->get('size', "39x40");
 		
 		$i = 0;
 		
@@ -77,7 +77,7 @@ class modSgoSocialHelper
 		
 		// check custom 1
 		if ($params->get('custom1')) {
-			$icons->$i->icon = $theme . "/" . $size . "/" . $params->get('custom1_src');
+			$icons->$i->icon = $params->get('custom1_src');
 			$icons->$i->url = $params->get('custom1_url');
 			$i++;
 		}

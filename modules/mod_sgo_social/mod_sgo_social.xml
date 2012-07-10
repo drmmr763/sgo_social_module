@@ -41,6 +41,8 @@
 					label="Icon Size"
 					description="Select icon size. Only available for OneExtraPixel.com Theme">
 					<option
+						value="25x26">Tiny - 25x26</option>
+					<option
 						value="39x40">Small - 39x40</option>
 					<option
 						value="58x60">Medium - 58x60</option>
