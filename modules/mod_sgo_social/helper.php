@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 class modSgoSocialHelper
 {
 
-	static function &getIcons(&$params)
+	static function &getIcons($params)
 	{	
 		$theme		=	$params->get('theme', "extra");
 		$size		=	$params->get('size', "39x40");
