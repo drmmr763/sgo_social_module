@@ -27,7 +27,7 @@ class modSgoSocialHelper
 		}
 		
 		// check Facebook
-		if ($params->get('Facebook')) {
+		if ($params->get('facebook')) {
 			$icons->$i->icon = $theme . "/" . $size . "/" . "facebook.png";
 			$icons->$i->url = $params->get('facebook_url');
 			$i++;
