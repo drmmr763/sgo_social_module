@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
 	type="module"
-	version="2.5"
+	version="3.1"
 	client="site"
 	method="upgrade">
-	<name>mod_sgo_social</name>
+	<name>sgo_social_module</name>
 	<author>Chad Windnagle</author>
 	<creationDate>July 2012</creationDate>
 	<copyright>Copyright (C) 2005 - 2012 s-go Consulting, llc</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>chad@s-go.net</authorEmail>
 	<authorUrl>http://www.s-go.net</authorUrl>
-	<version>2.5.0</version>
+	<version>3.0.0</version>
 	<description>s-go consulting, lcc custom social icons module. Credits: Thanks to OneExtraPixel.com for the freebie icon set. </description>
 	<files>
-		<filename module="mod_sgo_social">mod_sgo_social.php</filename>
+		<filename module="sgo_social_module">sgo_social_module.php</filename>
 		<folder>tmpl</folder>
 		<folder>assets</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
-		<filename>mod_sgo_social.xml</filename>
+		<filename>sgo_social_module.xml</filename>
 	</files>
 	<config>
 		<fields name="params">
